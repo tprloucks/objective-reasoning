@@ -11,16 +11,13 @@ function isAdmin (user){
 }
 
 function getEmail (user){
-    let email = user.firstName+'.'+user.lastName+"@codeimmersives.com"
-    return email
+    const lowerFirst = user.firstName.toLowerCase()
+    const lowerLast = user.lastName.toLowerCase()
+    return `${lowerFirst}.${lowerLast}@codeimmersives.com`
 }
 
-function getPlayList (playlist){
-    let count = 0
-    for (i = 0; i < playlist.length; i++){
-        count += 1;
-
-    }return count
+function getPlaylistLength (playlist){
+    return playlist.songs.length
 }
 
 
